@@ -1,0 +1,49 @@
+server:
+  port: 9191
+spring:
+  application:
+    name: VISOR-MASTER-SERVICE
+    #visor-master-services
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+#  datasource:
+#    url: jdbc:oracle:thin:@164.52.212.83:1522/orcl.ssdcloudindia.net
+#    username: accelerate
+#    password: password
+    jpa: 
+    properties:
+      hibernate:
+        formatSql: true
+        jdbc:
+          lob:
+            non-contextual-creation: true
+    databasePlatform: org.hibernate.dialect.PostgreSQL9Dialect
+    show-sql: false 
+    hibernate: 
+      ddlAuto: create-drop 
+      naming:
+        implicitStrategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+ 
+logging:
+  level:
+    org:
+      hibernate:
+        type: error
+
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      #defaultZone: http://164.52.202.187:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+   hostname: localhost
