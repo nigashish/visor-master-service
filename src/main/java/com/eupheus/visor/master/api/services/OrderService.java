@@ -4,10 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.accelerate.visor.model.Order;
 import com.eupheus.visor.master.api.dto.Payments;
 import com.eupheus.visor.master.api.dto.TransactionalRequest;
 import com.eupheus.visor.master.api.dto.TransactionalResponse;
-import com.eupheus.visor.master.api.model.Order;
 import com.eupheus.visor.master.api.repository.OrderRepository;
 
 @Service

@@ -6,10 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.eupheus.visor.master.api.dto.Payments;
 import com.eupheus.visor.master.api.dto.TransactionalRequest;
 import com.eupheus.visor.master.api.dto.TransactionalResponse;
-import com.eupheus.visor.master.api.model.Order;
 import com.eupheus.visor.master.api.services.OrderService;
 
 @RestController
