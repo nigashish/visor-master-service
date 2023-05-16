@@ -1,6 +1,7 @@
 package com.eupheus.visor.master.api.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -14,6 +15,11 @@ import com.eupheus.visor.master.api.repository.OrderRepository;
 public class OrderService {
 	private @Autowired OrderRepository orderRepository;
 	private @Autowired RestTemplate restTemplate;
+	
+	/*
+	 * @Value("${microservice.visor-master-service.endpoints.endpoint.uri}") private
+	 * String ENDPOINT_URL;
+	 */
 
 	public TransactionalResponse saveOrder(TransactionalRequest transactionalRequest) {
 		String responsemsg="";
@@ -24,7 +30,7 @@ public class OrderService {
 		//rest call from here 
 		//Payments paymentResponse = restTemplate.postForObject("http://localhost:9192/payments/dopayment", payments, Payments.class);
 		Payments paymentResponse = restTemplate.postForObject("http://VISOR-PRS-SERVICE/prs/dopayment", payments, Payments.class);
-
+		//Payments paymentResponse = restTemplate.postForObject(ENDPOINT_URL+"dopayment", payments, Payments.class);
 		responsemsg=paymentResponse.getPaymentStatus().equals("SUCCSESS")?
 				"Payment Processing is successful and order Placed":"There is no failure in payment ,itms is added to card";
 		orderRepository.save(order);
