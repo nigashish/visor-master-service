@@ -3,7 +3,6 @@ server:
 spring:
   application:
     name: VISOR-MASTER-SERVICE
-    #visor-master-services
   h2:
     console:
       enabled: true
@@ -36,22 +35,4 @@ logging:
       hibernate:
         type: error
 
-microservice:
- visor-master-service:
-  endpoints:
-   endpoint:
-    uri:http://VISOR-MASTER-SERVICE/masters/
 
-
- 
-
-
-#eureka:
-#  client:
-#    register-with-eureka: true
-#    fetch-registry: true
-#    serviceUrl:
-#      #defaultZone: http://164.52.202.187:8761/eureka/
-#      defaultZone: http://localhost:8761/eureka/
-#  instance:
-#   hostname: localhost

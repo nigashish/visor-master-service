@@ -1,6 +1,8 @@
 package com.eupheus.visor.master.api.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +13,7 @@ import com.eupheus.visor.master.api.dto.TransactionalResponse;
 import com.eupheus.visor.master.api.services.OrderService;
 
 @RestController
+@RefreshScope
 @RequestMapping("/masters")
 public class OrderController {
 	private @Autowired OrderService orderService;
