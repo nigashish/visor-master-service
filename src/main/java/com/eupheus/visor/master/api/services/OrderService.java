@@ -35,8 +35,9 @@ public class OrderService {
 	@Value("${microservice.visor-adminapp-service.endpoints.endpoint.uri}")
     private String ADMIN_ENDPOINT_URL;
 	
-	@Value("${eureka.client.register-with-eureka}")
-    private String eureka;
+	/*
+	 * @Value("${eureka.client.register-with-eureka}") private String eureka;
+	 */
 
 
 	public TransactionalResponse saveOrder(TransactionalRequest transactionalRequest) {

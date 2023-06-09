@@ -13,12 +13,12 @@ public abstract class Entity implements IdProvider{
     @Column(name = "id", updatable = false, nullable = false, columnDefinition = "BIGSERIAL")
     protected Long id = null;
 
-    @Type(type = "org.hibernate.type.OffsetDateTimeType")
+    //@Type(type = "org.hibernate.type.OffsetDateTimeType")
     @Column(name = "created")
     protected OffsetDateTime created = OffsetDateTime.now();
 
     //Modified date is updated from EntityEventListener automatically
-    @Type(type = "org.hibernate.type.OffsetDateTimeType")
+    //@Type(type = "org.hibernate.type.OffsetDateTimeType")
     @Column(name = "modified")
     protected OffsetDateTime modified = OffsetDateTime.now();
 
