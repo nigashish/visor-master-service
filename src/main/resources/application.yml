@@ -13,7 +13,7 @@ spring:
 #    driverClassName: org.h2.Driver
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/accelerate_dev_migrate
+    url: jdbc:postgresql://localhost:5432/accelerate_migrate_dev
     username: accelerate
     password: password
     
