@@ -1,14 +1,13 @@
-package com.eupheus.visor.master.api.services;
+package com.eupheus.visor.master.api.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.client.RestTemplate;
 
-import com.accelerate.visor.model.Order;
+import com.accelerate.visor.school.model.Order;
 import com.eupheus.visor.master.api.dto.Payments;
 import com.eupheus.visor.master.api.dto.TransactionalRequest;
 import com.eupheus.visor.master.api.dto.TransactionalResponse;

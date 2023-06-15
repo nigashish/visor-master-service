@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.accelerate.visor.model.AcademicYear;
+import com.accelerate.visor.school.model.AcademicYear;
 import com.eupheus.visor.master.api.repository.AcademicYearRepository;
 @RestController
 @RefreshScope

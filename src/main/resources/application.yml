@@ -3,20 +3,11 @@ server:
 spring:
   application:
     name: VISOR-MASTER-SERVICE
-#  h2:
-#    console:
-#      enabled: true
-#  datasource:
-#    url: jdbc:h2:mem:mydb
-#    username: sa
-#    password: password
-#    driverClassName: org.h2.Driver
-
   datasource:
     url: jdbc:postgresql://localhost:5432/accelerate_migrate_dev
     username: accelerate
     password: password
-    
+ 
     hikari:
       connection-timeout: 20000
       minimum-idle: 1
@@ -26,6 +17,7 @@ spring:
       auto-commit: true
   jpa:
     hibernate:
+      ddl-auto: update
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     properties:
