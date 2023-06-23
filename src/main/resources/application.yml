@@ -4,7 +4,7 @@ spring:
   application:
     name: VISOR-MASTER-SERVICE
   datasource:
-    url: jdbc:postgresql://localhost:5432/accelerate_migrate_dev
+    url: jdbc:postgresql://localhost:5432/accelerate_dev
     username: accelerate
     password: password
  

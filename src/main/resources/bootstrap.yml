@@ -3,35 +3,37 @@ spring:
     config:
       uri:
       - http:localhost:9198
+  application:
+    name: visor-master-service
       
       
 microservice:
   visor-prs-service:
     endpoints:
       endpoint:
-        uri: http://VISOR-PRS-SERVICE/prs/
+        uri: http://visor-prs-service/prs/
   visor-master-service:
     endpoints:
       endpoint:
-        uri: http://VISOR-MASTER-SERVICE/masters/
+        uri: http://visor-master-service/masters/
   visor-exams-service:
     endpoints:
       endpoint:
-        uri: http://VISOR-EXAMS-SERVICE/exams/
+        uri: http://visor-exams-service/exams/
   visor-schoolapp-service:
     endpoints:
       endpoint:
-        uri: http://VISOR-SCHOOLAPP-SERVICE/schools/
+        uri: http://visor-schoolapp-service/schools/
   visor-teacherapp-service:
     endpoints:
       endpoint:
-        uri: http://VISOR-TEACHERAPP-SERVICE/teachers/
+        uri: http://visor-teacherapp-service/teachers/
   visor-adminapp-service:
     endpoints:
       endpoint:
-        uri: http://VISOR-ADMINAPP-SERVICE/admin/
+        uri: http://visor-adminapp-service/admin/
   visor-studentapp-service:
     endpoints:
       endpoint:
-        uri: http://VISOR-STUDENTAPP-SERVICE/students/
+        uri: http://visor-studentapp-service/students/
  

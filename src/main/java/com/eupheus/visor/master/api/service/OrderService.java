@@ -52,7 +52,7 @@ public class OrderService {
 		// payments, Payments.class);
 		/*
 		 * Payments paymentResponse =
-		 * restTemplate.postForObject("http://VISOR-PRS-SERVICE/prs/dopayment",
+		 * restTemplate.postForObject("http://visor-prs-service/prs/dopayment",
 		 * payments, Payments.class);
 		 */
 	    Payments paymentResponse = restTemplate.postForObject(PRS_ENDPOINT_URL +
